@@ -26,11 +26,6 @@ impl epi::App for App {
                 );
                 ui.label("+");
                 ui.add(egui::DragValue::new(&mut self.coefs[2]).speed(0.01));
-                ui.label("=");
-                ui.add(|ui: &mut egui::Ui| {
-                    ui.style_mut().override_text_style = Some(egui::TextStyle::Monospace);
-                    ui.label("0")
-                });
             });
 
             ui.add(
