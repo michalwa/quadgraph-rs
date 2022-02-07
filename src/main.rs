@@ -33,7 +33,11 @@ impl epi::App for App {
                 });
             });
 
-            ui.add(egui::Slider::new(&mut self.resolution, 10..=1000).prefix("Resolution: ").logarithmic(true));
+            ui.add(
+                egui::Slider::new(&mut self.resolution, 10..=1000)
+                    .prefix("Resolution: ")
+                    .logarithmic(true),
+            );
 
             egui::plot::Plot::new("plot_0").show(ui, |plot| {
                 let coefs = self.coefs;
